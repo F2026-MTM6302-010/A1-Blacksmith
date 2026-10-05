@@ -80,9 +80,27 @@
         updateForge();
     }
 // 6. Write heatForge(amount). Add heat, cap it, and update the page.
+    function heatForge(amount){
+        heat = heat + amount;
 
+        if(heat > 100){
+            heat = 100;
+        }
+        actionMessage.textContent = "The forge is heated."
+        updateForge();
+    }
 // 7. Write makeSword(). Handle both success and insufficient heat.
-
+    function makeSword(){
+        if(heat >=30){
+            heat = heat - 30;
+            swords = swords + 1;
+            actionMessage.textContent = "A sword was made!"
+        }else{
+            actionMessage.textContent = "Fuel my heat to make a sword."
+        }
+        updateForge();
+    }
 // 8. Call resetForge() once to start the game.
+    resetForge();
 
 // Use the tests in ASSIGNMENT.md to check your work.
