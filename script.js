@@ -56,24 +56,29 @@
         if(heat < 30){
             forgeCard.classList.add("is-cold");
             forgeImage.setAttribute("src", "assets/forge-cold.svg");
-            forgeImage.setAttribute("alt", "A grey forge without fire.")
+            forgeImage.setAttribute("alt", "A stone forge with dark coals and no flames.")
         }
 
         else if(heat < 70){
             forgeCard.classList.add("is-ready");
             forgeImage.setAttribute("src", "assets/forge-ready.svg");
-            forgeImage.setAttribute("alt", "A grey forge with a smooth yellow flame.")
+            forgeImage.setAttribute("alt", "A stone forge with a small orange fire.")
         }
 
         else{
             forgeCard.classList.add("is-roaring");
             forgeImage.setAttribute("src", "assets/forge-roaring.svg");
-            forgeImage.setAttribute("alt", "A grey forge with a bigger orange flame with sparks.")
+            forgeImage.setAttribute("alt", "A stone forge with tall bright flames and sparks.")
         }
     }
 
 // 5. Write resetForge(). Restore the state, message, and display.
-
+    function resetForge(){
+        heat = 20;
+        swords = 0;
+        actionMessage.textContent = "Welcome to the forge. Add heat to begin.";
+        updateForge();
+    }
 // 6. Write heatForge(amount). Add heat, cap it, and update the page.
 
 // 7. Write makeSword(). Handle both success and insufficient heat.
