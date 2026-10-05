@@ -19,17 +19,27 @@
 // 1. Select the forge, heat, sword count, status, image, and message elements.
 //    Find their IDs in index.html.
     const forgeCard = document.getElementById("forge");
-    const heatValue = document.querySelector("#heat-value");
+    const heatValue = document.querySelector("#heat-value"); /* Find where is the heat value */
     const swordCount = document.querySelector("#sword-count");
     const forgeImage = document.querySelector("#forge-image");
-    const forgeHeading = document.querySelector("#forge-heading");
-    const forgeStatus = document.querySelector("#forge-status");
-    const statusMessage = document.querySelector("#action-message");
+    const forgeStatusMessage = document.querySelector("#forge-status");
+    const actionMessage = document.querySelector("#action-message");
 
 
 // 2. Create the two state variables: heat and swords made.
-    
+    let heat = 20; /* Current value of the heat and the value that I can change to play but it's not the same as the Id above */
+    let swords = 0;
+
 // 3. Write getForgeStatus(heatValue). Return the correct status string.
+    function getForgeStatus(heatValue){
+        if(heatValue < 30){
+            return "Too cold";
+        }else if(heatValue < 70){
+            return "Ready to forge"
+        }else{
+            return "Roaring fire"
+        }
+    }
 
 // 4. Write updateForge(). Update text and apply one status class.
 //    Change the supplied forge image src and alt to match the heat.
