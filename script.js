@@ -1,12 +1,34 @@
 // Assignment 1: Blacksmith — The Tiny Forge
 
 // PLAN: Write a short pseudocode plan for making a sword here.
+    /* I'll gonna try to explain to me first how the gamw works to create the plan according my thoughts.
+    The plan is based on what I already habe under HTML and the reasoning of the game, I should say the plan is heat the forge which means create the fire, and thi fire will be the responsible for making swords but to create the fire I have to increase the value above 20 (because the 20 is the current value and it shows "Too cold" and once is too cold it's not possible to make swords because there's no fire).
+    1st: Increase the Heat for the Forge (find heatForge) and stablish a value upper 20 until 100.
+    2nd: makeSword using the value on the heat to make the sword
+    3rd: Based on testing the numbers I'll see the Forge Condition, the image changing and the messages according to the HTML and the mood of the game.
 
+    How practically I'll gonna go this:
+    if (heat < 30) the fire is gonna be "Too cold" consequently the image is greyish and it's not gonna make any sword.
+    else if (heat < 70) the fire is gonna be "Ready to forge" which means ready to make a sword.
+    else () is gonna be the value between 70 to 100 = "Roaring fire. Keep crafting!" which means any value after 70 it's good to make a sword.
+
+    Last but not least I have to reset which means reset the game to test things out and see what happen manipulating values. 
+    */
+
+    
 // 1. Select the forge, heat, sword count, status, image, and message elements.
 //    Find their IDs in index.html.
+    const forgeCard = document.getElementById("forge");
+    const heatValue = document.querySelector("#heat-value");
+    const swordCount = document.querySelector("#sword-count");
+    const forgeImage = document.querySelector("#forge-image");
+    const forgeHeading = document.querySelector("#forge-heading");
+    const forgeStatus = document.querySelector("#forge-status");
+    const statusMessage = document.querySelector("#action-message");
+
 
 // 2. Create the two state variables: heat and swords made.
-
+    
 // 3. Write getForgeStatus(heatValue). Return the correct status string.
 
 // 4. Write updateForge(). Update text and apply one status class.
