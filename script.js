@@ -56,19 +56,19 @@
         if(heat < 30){
             forgeCard.classList.add("is-cold");
             forgeImage.setAttribute("src", "assets/forge-cold.svg");
-            forgeImage.setAttribute("alt", "A stone forge with dark coals and no flames.")
+            forgeImage.setAttribute("alt", "A stone forge with dark coals and no flames")
         }
 
         else if(heat < 70){
             forgeCard.classList.add("is-ready");
             forgeImage.setAttribute("src", "assets/forge-ready.svg");
-            forgeImage.setAttribute("alt", "A stone forge with a small orange fire.")
+            forgeImage.setAttribute("alt", "A stone forge with a small orange fire")
         }
 
         else{
             forgeCard.classList.add("is-roaring");
             forgeImage.setAttribute("src", "assets/forge-roaring.svg");
-            forgeImage.setAttribute("alt", "A stone forge with tall bright flames and sparks.")
+            forgeImage.setAttribute("alt", "A stone forge with tall bright flames and sparks")
         }
     }
 
